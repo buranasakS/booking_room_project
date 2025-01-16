@@ -7,7 +7,8 @@
     </a>
 
     <a class="navbar-brand" href="index.html">ระบบจองห้องประชุม</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -61,14 +62,14 @@
         <?php
         // session_start();
         //check session 
-        // if (isset($_SESSION['user'])) {
+        if (isset($_SESSION['user'])) {
           echo "<p style='color:white'>ยินดีต้อนรับ ";
           echo $_SESSION['user'];
           echo "</p>";
-        // } else {
-        //   echo "<script>alert('คุณยังไม่ได้เข้าสู่ระบบ กลับไปยังหน้าเข้าสู่ระบบก่อน')</script>";
-        //   echo "<script>window.open('login.php','_self')</script>";
-        // }
+        } else {
+          echo "<script>alert('คุณยังไม่ได้เข้าสู่ระบบ กลับไปยังหน้าเข้าสู่ระบบก่อน')</script>";
+          echo "<script>window.open('login.php','_self')</script>";
+        }
         ?>
 
         <a href="logout.php" class="btn btn-primary" role="button">ออกจากระบบ</a>
